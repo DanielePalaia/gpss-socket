@@ -21,7 +21,7 @@ CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email var
    **GreenplumPasswd=</br>**
    **Database=test</br>**
    **SchemaName=public</br>**
-   **TableName=companies</br>**
+   **TableName=people</br>**
    **PipePath=./mypipe</br>**
    **Delim=;</br>**
    **Batch=100</br>**
