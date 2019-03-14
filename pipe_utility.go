@@ -39,7 +39,10 @@ func (client *pipeClient) readPipe() {
 	for true {
 		log.Print("waiting for someone to write something in the pipe")
 
-		stdout, _ := os.OpenFile(client.pipePath, os.O_RDONLY, 0600)
+		stdout, err := os.OpenFile(client.pipePath, os.O_RDONLY, 0600)
+		if err != nil {
+			client.failOnError(err, "fatal error opening the pipe: probably does not exist")
+		}
 		var buff bytes.Buffer
 		io.Copy(&buff, stdout)
 		stdout.Close()
