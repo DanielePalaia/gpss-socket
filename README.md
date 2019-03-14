@@ -14,16 +14,16 @@ CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email var
 
 4) Configure the program properties (./bin/linux/properties.ini), where put the path of the pipe created and the delim set as input field separator (; in case of csv) </br>
 
-  **GpssAddress=10.91.51.23:50007</br>**
-  **GreenplumAddress=10.91.51.23</br>**
-  **GreenplumPort=5533</br>**
-  **GreenplumUser=gpadmin</br>**
-  **GreenplumPasswd=</br>**
-  **Database=test</br>**
-  **SchemaName=public</br>**
-  **TableName=companies</br>**
-  **PipePath=./mypipe</br>**
-  **Delim=;</br>**
+   **GpssAddress=10.91.51.23:50007</br>**
+   **GreenplumAddress=10.91.51.23</br>**
+   **GreenplumPort=5533</br>**
+   **GreenplumUser=gpadmin</br>**
+   **GreenplumPasswd=</br>**
+   **Database=test</br>**
+   **SchemaName=public</br>**
+   **TableName=companies</br>**
+   **PipePath=./mypipe</br>**
+   **Delim=;</br>**
 
 5) Run the software (./bin/macosx/pipegpss or ./bin/linux/pipegpss) </br>
 
