@@ -1,7 +1,7 @@
 # gpss-pipe
 gpss integration with pipes
 
-This component is forever from a pipe (when EOF is reached it ask to gpss to write the info). </br>
+This component is listening forever to a pipe (when EOF is reached it ask to gpss to write the info). </br>
 
 1) a gpss server needs to be initialized and working </br>
 
