@@ -8,7 +8,7 @@ This component is forever from a pipe (when EOF is reached it ask to gpss to wri
 2) Let's create a named pipe in Linux: </br>
 mkfifo mypipe <br>
 
-3) Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br></br>
+3) Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br>
 
 CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10)); </br>
 
