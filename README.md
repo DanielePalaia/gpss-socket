@@ -5,7 +5,7 @@ This component is listening forever to a pipe (when EOF is reached it ask to gps
 
 1) a gpss server needs to be initialized and working </br>
 
-2) Let's create a named pipe in Linux: </br>
+2) Let's create a named pipe in Linux: </br></br>
     **mkfifo mypipe </br>**
 
 3) Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br>
