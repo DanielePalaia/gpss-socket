@@ -11,6 +11,7 @@ func main() {
 	/* Reading properties from ./properties.ini */
 	prop, _ := ReadPropertiesFile("./properties.ini")
 	port, _ := strconv.Atoi(prop["GreenplumPort"])
+	batch, _ := strconv.Atoi(prop["Batch"])
 
 	log.Printf("Properties read: Connecting to the Grpc server specified")
 
@@ -22,7 +23,7 @@ func main() {
 
 	log.Printf("delegating to pipe client")
 
-	pipe := makePipeClient(prop["PipePath"], gpssClient, prop["Delim"])
+	pipe := makePipeClient(prop["PipePath"], gpssClient, batch, prop["Delim"])
 	pipe.readPipe()
 
 }

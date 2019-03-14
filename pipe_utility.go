@@ -16,10 +16,10 @@ type pipeClient struct {
 	gpssclient *gpssClient
 }
 
-func makePipeClient(pipePath string, gpssclient *gpssClient, delim string) *pipeClient {
+func makePipeClient(pipePath string, gpssclient *gpssClient, batch int, delim string) *pipeClient {
 	client := new(pipeClient)
 	client.pipePath = pipePath
-	client.batch = 100
+	client.batch = batch
 	client.delim = delim
 	client.buffer = make([]string, client.batch)
 	client.gpssclient = gpssclient
