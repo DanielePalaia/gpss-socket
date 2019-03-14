@@ -12,7 +12,7 @@ This component is listening forever to a pipe (when EOF is reached it ask to gps
 
 CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10)); </br>
 
-4) Configure the program properties (./bin/linux/properties.ini), where put the path of the pipe created and the delim set as input field separator (; in case of csv) </br>
+4) Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv) </br>
 
    **GpssAddress=10.91.51.23:50007</br>**
    **GreenplumAddress=10.91.51.23</br>**
