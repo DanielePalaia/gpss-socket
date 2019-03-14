@@ -24,6 +24,7 @@ CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email var
    **TableName=companies</br>**
    **PipePath=./mypipe</br>**
    **Delim=;</br>**
+   **Batch=100</br>**
 
 5) Run the software (./bin/macosx/pipegpss or ./bin/linux/pipegpss) </br>
 
