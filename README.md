@@ -1,18 +1,21 @@
-# gpss-pipe
-gpss integration with pipes
+# gpss-socket
 
-This component is listening forever to a pipe (when EOF is reached it ask to gpss to write the info). </br>
+gpss integration with linux tcp socket.
+
+Varation of:
+https://github.com/DanielePalaia/gpss-pipe
+
+We are now receving info from a socket.
+
+This component is implementing a tcp server. The tcp server loops for new connection and the wait for data coming from the socket. </br>
 
 1) a gpss server needs to be initialized and working </br>
 
-2) Let's create a named pipe in Linux: </br></br>
-    **mkfifo mypipe </br>**
-
 3) Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br>
 
-CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10)); </br>
+**CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10));** </br>
 
-4) Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv) </br>
+4) Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv. SocketAddress is the port where the tcp server will listen) </br>
 
    **GpssAddress=10.91.51.23:50007</br>**
    **GreenplumAddress=10.91.51.23</br>**
@@ -22,28 +25,34 @@ CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email var
    **Database=test</br>**
    **SchemaName=public</br>**
    **TableName=people</br>**
-   **PipePath=./mypipe</br>**
+   **SocketAddress=:8080</br>**
    **Delim=;</br>**
-   **Batch=100</br>**
+   **Batch=5</br>**
 
 5) Run the software (./bin/macosx/pipegpss or ./bin/linux/pipegpss) </br>
 
-    Danieles-MacBook-Pro:bin dpalaia$ ./pipegpss</br>
-    **2019/03/14 15:58:11 Starting the connector and reading properties in the properties.ini file</br>**
-    **2019/03/14 15:58:11 Properties read: Connecting to the Grpc server specified</br>**
-    **2019/03/14 15:58:11 Connected to the grpc server</br>**
-    **2019/03/14 15:58:11 delegating to pipe client</br>**
-    **2019/03/14 15:58:11 Opening named pipe: ./mypipe for reading</br>**
-    **2019/03/14 15:58:11 waiting for someone to write something in the pipe</br></br>**
+   **Danieles-MBP:macosx dpalaia$ ./gpss-socket**
+   **2019/12/02 14:38:46 Starting the connector and reading properties in the properties.ini file**
+   **2019/12/02 14:38:46 Properties read: Connecting to the Grpc server specified  **
+   **2019/12/02 14:38:46 Connected to the grpc server**
+   **2019/12/02 14:38:46 Listening connections to:8080**
 
-6) submit the example csv file provided in the pipe (./bin/macosx/data.csv): it contains 1000 elements </br>
+6) Run the client binary as well which will send 10 rows like this in the socket:
+   **1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**
 
-    **cat data.csv >> mypipe </br>**
+   ./client/bin/client
+   
+   **Danieles-MBP:osx dpalaia$ ./client
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
+  
 
-7) you should see some logs in the pipegpss screen and the table populated with 1K elements </br>
-
-    **test=# select count(*) from people;</br>**
-    ** count </br>**
-    **-------</br>**
-    **  1000</br>**
-    **(1 row)</br>**
+7) you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
