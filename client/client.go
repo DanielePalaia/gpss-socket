@@ -13,12 +13,13 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Print("sending line: " + "1;Renaldo;Bulmer;rbulmer0@nymag.com;Male\n")
 		//text, _ := reader.ReadString('\n')
-		text := "1;Renaldo;Bulmer;rbulmer0@nymag.com;Male"
+		text := "1;Renaldo;Bulmer;rbulmer0@nymag.com;Male\n"
 		// send to socket
 		fmt.Fprintf(conn, text)
 		// listen for reply
 		//message, _ := bufio.NewReader(conn).ReadString('\n')
 	}
+	conn.Close()
 	//fmt.Print("Message from server: " + message)
 	//}
 }
