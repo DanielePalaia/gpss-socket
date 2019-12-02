@@ -15,7 +15,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
 
   **CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10));** </br>
 
-4) Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv. **SocketAddress** is the port where the tcp server will listen) </br>
+3) Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv. **SocketAddress** is the port where the tcp server will listen) </br>
 
    **GpssAddress=10.91.51.23:50007</br>**
    **GreenplumAddress=10.91.51.23</br>**
@@ -29,7 +29,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    **Delim=;</br>**
    **Batch=5</br>**
 
-5) Run the software (./bin/macosx/gpsssocket or ./bin/linux/gpsssocket) </br>
+4) Run the software (./bin/macosx/gpsssocket or ./bin/linux/gpsssocket) </br>
 
    **Danieles-MBP:macosx dpalaia$ ./gpss-socket**</br>
    **2019/12/02 14:38:46 Starting the connector and reading properties in the properties.ini file**</br>
@@ -37,7 +37,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    **2019/12/02 14:38:46 Connected to the grpc server**</br>
    **2019/12/02 14:38:46 Listening connections to:8080**</br>
 
-6) Run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
+5) Run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
 
    **1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
 
@@ -58,7 +58,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
  
  The server is able to handle multiple connections in parallel
 
-7) you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
+6) you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
 see the server logs:</br>
 
    **Connected to: 127.0.0.1:53056**</br>
