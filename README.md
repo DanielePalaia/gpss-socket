@@ -41,7 +41,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    2019/12/02 14:38:46 Listening connections to:8080
 ```
 
-5. In order to test the software, run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
+5. In order to test the software, run the client binary as well which will connect to the server and send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
 
    **1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
 
