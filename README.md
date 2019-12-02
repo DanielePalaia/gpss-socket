@@ -33,7 +33,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
 
    **Danieles-MBP:macosx dpalaia$ ./gpss-socket**</br>
    **2019/12/02 14:38:46 Starting the connector and reading properties in the properties.ini file**</br>
-   **2019/12/02 14:38:46 Properties read: Connecting to the Grpc server specified  **</br>
+   **2019/12/02 14:38:46 Properties read: Connecting to the Grpc server specified**</br>
    **2019/12/02 14:38:46 Connected to the grpc server**</br>
    **2019/12/02 14:38:46 Listening connections to:8080**</br>
 
