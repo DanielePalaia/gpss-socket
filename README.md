@@ -1,6 +1,7 @@
 # gpss-socket
 
-gpss integration with linux tcp socket.
+gpss integration with tcp socket. </br>
+In this scenario sockets are of type tcp but we can have with the same principle upd and unix sockets. </br>
 
 Small varation of:
 https://github.com/DanielePalaia/gpss-pipe
