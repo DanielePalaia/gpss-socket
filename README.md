@@ -31,15 +31,11 @@ This component is implementing a tcp server. The tcp server wait for new connect
 
 4) Run the software (./bin/macosx/gpsssocket or ./bin/linux/gpsssocket) </br>
 
-<<<<<<< HEAD
    **Danieles-MBP:macosx dpalaia$ ./gpss-socket**</br>
    **2019/12/02 14:38:46 Starting the connector and reading properties in the properties.ini file**</br>
    **2019/12/02 14:38:46 Properties read: Connecting to the Grpc server specified**</br>
    **2019/12/02 14:38:46 Connected to the grpc server**</br>
    **2019/12/02 14:38:46 Listening connections to:8080**</br>
-=======
-5) Run the software (./bin/macosx/pipegpss or ./bin/linux/gpss-pipe) </br>
->>>>>>> Update README.md
 
 5) Run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
 
