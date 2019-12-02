@@ -37,7 +37,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    **2019/12/02 14:38:46 Connected to the grpc server**
    **2019/12/02 14:38:46 Listening connections to:8080**
 
-6) Run the client binary as well which will send 10 rows like this in the socket:
+6) Run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
 
    **1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
 
@@ -60,15 +60,15 @@ This component is implementing a tcp server. The tcp server wait for new connect
 7) you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
 see the server logs:</br>
 
-**Connected to: 127.0.0.1:53056**</br>
-**2019/12/02 15:02:03 connecting to a greenplum database**</br>
-**2019/12/02 15:02:03 Beginning to write to greenplum**</br>
-**2019/12/02 15:02:03 table informations**</br>
-**2019/12/02 15:02:03 prepare for writing**</br>
-**Result:  SuccessCount:5**</br>
-**2019/12/02 15:02:04 disconnecting to a greenplum database**</br>
-**2019/12/02 15:02:04 connecting to a greenplum database**</br>
-**2019/12/02 15:02:04 Beginning to write to greenplum**</br>
-**2019/12/02 15:02:04 table informations**</br>
-**2019/12/02 15:02:04 prepare for writing**</br>
-**Result:  SuccessCount:5**</br>
+   **Connected to: 127.0.0.1:53056**</br>
+   **2019/12/02 15:02:03 connecting to a greenplum database**</br>
+   **2019/12/02 15:02:03 Beginning to write to greenplum**</br>
+   **2019/12/02 15:02:03 table informations**</br>
+   **2019/12/02 15:02:03 prepare for writing**</br>
+   **Result:  SuccessCount:5**</br>
+   **2019/12/02 15:02:04 disconnecting to a greenplum database**</br>
+   **2019/12/02 15:02:04 connecting to a greenplum database**</br>
+   **2019/12/02 15:02:04 Beginning to write to greenplum**</br>
+   **2019/12/02 15:02:04 table informations**</br>
+   **2019/12/02 15:02:04 prepare for writing**</br>
+   **Result:  SuccessCount:5**</br>
