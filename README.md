@@ -49,7 +49,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
     ./client/bin/linux/client</br>
 
 ```
-   Danieles-MBP:osx dpalaia$ ./client**</br>
+   Danieles-MBP:osx dpalaia$ ./client
    sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
    sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
    sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male
