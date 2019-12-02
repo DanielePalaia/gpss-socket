@@ -41,10 +41,10 @@ This component is implementing a tcp server. The tcp server wait for new connect
 
    **1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
 
-   ./client/bin/osx/client</br>
+    ./client/bin/osx/client</br>
     ./client/bin/linux/client</br>
    
-   **Danieles-MBP:osx dpalaia$ ./client
+   **Danieles-MBP:osx dpalaia$ ./client**</br>
    **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
    **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
    **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
@@ -55,7 +55,8 @@ This component is implementing a tcp server. The tcp server wait for new connect
    **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
    **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
    **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
-  
+ 
+ The server is able to handle multiple connections in parallel
 
 7) you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
 see the server logs:</br>
