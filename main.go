@@ -20,10 +20,9 @@ func main() {
 	gpssClient.ConnectToGrpcServer()
 
 	log.Printf("Connected to the grpc server")
+	log.Printf("Listening connections to" + prop["SocketAddress"])
 
-	log.Printf("delegating to pipe client")
-
-	pipe := makePipeClient(prop["PipePath"], gpssClient, batch, prop["Delim"])
-	pipe.readPipe()
+	socket := makeSocketClient(prop["SocketAddress"], gpssClient, batch, prop["Delim"])
+	socket.socketListen()
 
 }
