@@ -9,13 +9,13 @@ We are now receving info from a socket and push them back to Greenplum using GPS
 
 This component is implementing a tcp server. The tcp server wait for new connections (in multithreading) and then wait for data coming from the opened socket. </br>
 
-### a gpss server needs to be initialized and working </br>
+1. a gpss server needs to be initialized and working </br>
 
-### Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br>
+2. Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br>
 
    **CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10));** </br>
 
-### Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv. **SocketAddress** is the port where the tcp server will listen) </br>
+3. Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv. **SocketAddress** is the port where the tcp server will listen) </br>
 
 ```
    GpssAddress=10.91.51.23:50007
@@ -31,7 +31,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    Batch=5
 ```   
 
-### Run the software (./bin/macosx/gpss-socket or ./bin/linux/gpss-socket) </br>
+4. Run the software (./bin/macosx/gpss-socket or ./bin/linux/gpss-socket) </br>
 
 ```
    Danieles-MBP:macosx dpalaia$ ./gpss-socket
@@ -41,7 +41,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    2019/12/02 14:38:46 Listening connections to:8080
 ```
 
-### In order to test the software, run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
+5. In order to test the software, run the client binary as well which will send 10 rows like this in the socket (it will create a tcp connection with the server):</br>
 
    **1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
 
@@ -64,7 +64,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
 ```
  The server is able to handle multiple connections in parallel
 
-### you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
+6. you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
 see the server logs:</br>
 
 ```
