@@ -29,7 +29,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
    **Delim=;</br>**
    **Batch=5</br>**
 
-4) Run the software (./bin/macosx/gpsssocket or ./bin/linux/gpsssocket) </br>
+4) Run the software (./bin/macosx/gpss-socket or ./bin/linux/gpss-socket) </br>
 
    **Danieles-MBP:macosx dpalaia$ ./gpss-socket**</br>
    **2019/12/02 14:38:46 Starting the connector and reading properties in the properties.ini file**</br>
