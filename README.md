@@ -2,7 +2,7 @@
 
 gpss integration with linux tcp socket.
 
-Varation of:
+Small varation of:
 https://github.com/DanielePalaia/gpss-pipe
 
 We are now receving info from a socket and push them back to Greenplum using GPSS.
