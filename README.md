@@ -13,7 +13,7 @@ This component is implementing a tcp server. The tcp server wait for new connect
 
 3) Let's create the destination table in greenplum (whatever table is fine if it is coherent with the input fields) ex. </br>
 
-  **CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10));** </br>
+   **CREATE TABLE people(id int, name varchar(1000), surname varchar(1000), email varchar(1000), gender varchar(10));** </br>
 
 3) Configure the program properties file that needs to be in the path you are running the software (./bin/linux/properties.ini), where specify the path of the pipe created and the delim set as input field separator (; in case of csv. **SocketAddress** is the port where the tcp server will listen) </br>
 
