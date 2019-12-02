@@ -7,7 +7,7 @@ https://github.com/DanielePalaia/gpss-pipe
 
 We are now receving info from a socket.
 
-This component is implementing a tcp server. The tcp server loops for new connection and the wait for data coming from the socket. </br>
+This component is implementing a tcp server. The tcp server loops for new connections and the wait for data coming from the socket. </br>
 
 1) a gpss server needs to be initialized and working </br>
 
