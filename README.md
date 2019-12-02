@@ -45,16 +45,16 @@ This component is implementing a tcp server. The tcp server wait for new connect
     ./client/bin/linux/client</br>
    
    **Danieles-MBP:osx dpalaia$ ./client
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
-   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
+   **sending line: 1;Renaldo;Bulmer;rbulmer0@nymag.com;Male**</br>
   
 
 7) you should see some logs in the socketgpss screen and the table populated with 10 elements </br>
