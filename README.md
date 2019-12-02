@@ -7,7 +7,7 @@ https://github.com/DanielePalaia/gpss-pipe
 
 We are now receving info from a socket and push them back to Greenplum using GPSS.
 
-This component is implementing a tcp server. The tcp server wait for new connections (in multithreading) and the wait for data coming from the opened socket. </br>
+This component is implementing a tcp server. The tcp server wait for new connections (in multithreading) and then wait for data coming from the opened socket. </br>
 
 1) a gpss server needs to be initialized and working </br>
 
